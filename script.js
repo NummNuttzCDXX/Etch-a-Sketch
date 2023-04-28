@@ -1,7 +1,9 @@
 const div = document.createElement('div'),
-container = document.querySelector('.container')
+container = document.querySelector('.container'),
+btns = document.querySelectorAll('button')
 
-let rows = []
+let rows = [],
+pen = 'red'
 
 function createGrid(area) {
     // Rows
@@ -24,9 +26,18 @@ function createGrid(area) {
 let area = 16*16;
 createGrid(area);
 
-const cells = document.querySelectorAll('.cell')
+const cells = document.querySelectorAll('.cell') // Get Node List of all cells
+// Iterate through list, for every cell listen for mouse over and change bg color to pen color
 for (let cell of cells) {
     cell.addEventListener('mouseover', ()=> {
-        cell.setAttribute('id', 'draw');
+        cell.style.backgroundColor = pen;
+    })
+}
+
+// Iterate through buttons, check each id, change pen color according
+for (let btn of btns) {
+    btn.addEventListener('click', () => {
+        let color = btn.getAttribute('id')
+        pen = color
     })
 }
