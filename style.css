@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 650px;
+    height: 650px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    margin: 0;
+}
+
+.cell {
+    flex: 1;
+    margin: 0;
+    background-color: black;
+}
+
+.cell:hover {
+    background-color: blue;
+}
