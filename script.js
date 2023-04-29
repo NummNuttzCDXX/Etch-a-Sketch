@@ -1,7 +1,7 @@
 const div = document.createElement('div'),
     container = document.querySelector('.container'),
-    btns = document.querySelectorAll('.color'),
-    sizeBtns = document.querySelectorAll('.size')
+    btns = document.querySelectorAll('button.color'),
+    sizeBtns = document.querySelectorAll('button.size')
 
 // let rows = [],
 let pen = 'red'
@@ -39,6 +39,11 @@ function draw() {
     }
 }
 
+// Set color of color buttons -- Easier than using CSS
+for (let btn of btns) {
+    let color = btn.getAttribute('id')
+    btn.style.backgroundColor = color
+}
 
 // Iterate through color buttons, check each id, change pen color according
 for (let btn of btns) {
