@@ -16,17 +16,39 @@ h1 {
     gap: 20px;
 }
 
+/* Both divs containing buttons */
 .buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    width: 130px;
+}
+
+/* All buttons */
+button {
+    width: 50px;
+    height: 50px;
+}
+
+/* The color buttons */
+button.color {
+    flex-grow: 1;
+}
+
+/* The div containing color buttons */
+.buttons.color {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Sketch Box */
 .container {
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     width: 600px;
     height: 600px;
 }
