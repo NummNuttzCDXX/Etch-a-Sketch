@@ -38,11 +38,12 @@ button {
 /* The color buttons */
 button.color {
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: content;
 }
 
 /* The div containing color buttons */
 .buttons.color {
-    flex-grow: 1;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -51,6 +52,8 @@ button.color {
 
 /* The size buttons */
 button.size {
+    flex: 0, 1, auto;
+
     background-color: rgb(255, 175, 54);
     font-weight: 600;
 }
